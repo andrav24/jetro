@@ -18,14 +18,17 @@ html {
   box-sizing: inherit;
 }
 
-ul {
+a {
+  text-decoration: none;
+}
+
+.ul-default {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-a {
-  text-decoration: none;
+.color-black {
   color: #000;
 }
 
@@ -35,6 +38,8 @@ a {
   padding: 0 10px;
 }
 
+/*  Header  */
+
 .header {
   background-image: url("../images/bg.png");
 }
@@ -43,11 +48,19 @@ a {
   display: flex;
   height: 80px;
   justify-content: space-between;
-  align-items: center;
   font-family: 'Bebas', sans-serif;
   font-weight: normal;
   font-style: normal;
 }
+
+.header__logo {
+  align-self: center;
+}
+
+.header__menu {
+  padding-top: 35px;
+}
+
 
 .logo__link {
   font-size: 36px;
@@ -57,6 +70,11 @@ a {
 
 .logo__link > span {
   color: #e8603c;
+}
+
+.logo_img {
+  width: 87px;
+  height: 34px;
 }
 
 .menu__item {
