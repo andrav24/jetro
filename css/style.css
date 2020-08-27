@@ -8,6 +8,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue.woff2') format('woff2'),
+  url('../fonts/HelveticaNeue.woff') format('woff'),
+  url('../fonts/HelveticaNeue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -38,11 +48,16 @@ a {
   padding: 0 10px;
 }
 
-/*  Header  */
+.decor-block {
+  flex-grow: 1;
+  background-color: #f3af9d;
+}
 
-.header {
+.wrapper {
   background-image: url("../images/bg.png");
 }
+
+/* Header */
 
 .header__inner {
   display: flex;
@@ -95,4 +110,99 @@ a {
 
 .menu__link:hover {
   color: #e8603c;
+}
+
+/* Slider */
+
+.slider {
+  display: flex;
+}
+
+.slider::before {
+  content: '';
+  display: block;
+  height: 61px;
+  flex-grow: 1;
+  background-color: #f3af9d;
+}
+
+.slider::after {
+  content: '';
+  display: block;
+  height: 61px;
+  flex-grow: 1;
+  background-color: #f3af9d;
+}
+
+.slider__image {
+  position: relative;
+  min-height: 400px;
+  background-image: url("../images/slider-bg.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 18px;
+  pointer-events: none;
+}
+
+/* Arrows */
+.slider__image::before {
+  content: '';
+  position: absolute;
+  top: 43%;
+  left: 43px;
+  border: solid white;
+  border-width: 15px 0 0 15px;
+  display: inline-block;
+  padding: 12px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.slider__image::after {
+  content: '';
+  position: absolute;
+  top: 43%;
+  right: 43px;
+  border: solid white;
+  border-width: 0 15px 15px 0;
+  display: inline-block;
+  padding: 12px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.slider__description {
+  position: absolute;
+  bottom: 24px;
+  left: 36px;
+  width: 414px;
+  max-height: 124px;
+  padding: 22px 18px;
+  color: #fff;
+  background-color: rgba(232, 102, 60, .8);
+}
+
+.slider__title {
+  font-family: 'Bebas', sans-serif;
+  font-size: 18px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.slider__text {
+  font-family: 'HelveticaNeue', serif;
+  font-size: 12px;
+}
+
+/* Slick Library*/
+.slider-nav .slick-list .slick-track .slick-slide {
+  width: 140px !important;
+  margin-right: 20px;
+}
+
+.slider-nav .slick-list .slick-track .slick-slide:last-child {
+  margin-right: 0;
 }
