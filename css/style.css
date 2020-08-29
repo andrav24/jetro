@@ -10,10 +10,20 @@
 
 @font-face {
   font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-Light.woff2') format('woff2'),
+  url('../fonts/HelveticaNeue-Light.woff') format('woff'),
+  url('../fonts/HelveticaNeue-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
   src: url('../fonts/HelveticaNeue.woff2') format('woff2'),
   url('../fonts/HelveticaNeue.woff') format('woff'),
   url('../fonts/HelveticaNeue.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -116,6 +126,7 @@ a {
 
 .slider {
   display: flex;
+  margin-bottom: 38px;
 }
 
 .slider::before {
@@ -205,4 +216,63 @@ a {
 
 .slider-nav .slick-list .slick-track .slick-slide:last-child {
   margin-right: 0;
+}
+
+/* Offers */
+
+.features__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature {
+  max-width: 300px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.feature__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.feature__icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.feature__title {
+  font-family: 'Bebas', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #e8663c;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.feature__content {
+  font-family: 'HelveticaNeue', serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #414141;
+  min-height: 115px;
+  margin-bottom: 12px;
+}
+
+.feature__btn {
+  display: inline-block;
+  padding: 10px 16px 10px 12px;
+  font-family: 'Bebas', serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #e8663c;
+}
+
+.feature__btn a {
+  color: #fff;
 }
