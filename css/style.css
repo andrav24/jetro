@@ -58,11 +58,6 @@ a {
   padding: 0 10px;
 }
 
-.decor-block {
-  flex-grow: 1;
-  background-color: #f3af9d;
-}
-
 .wrapper {
   background-image: url("../images/bg.png");
 }
@@ -348,3 +343,109 @@ a {
   color: #e8663c;
   text-transform: uppercase;
 }
+
+/* Footer */
+.footer {
+  /*background-color: aquamarine;*/
+  min-height: 262px;
+  display: flex;
+}
+
+.footer::before {
+  content: '';
+  flex-grow: 1;
+  background-color: #f3af9d;
+}
+
+.footer::after {
+  content: '';
+  flex-grow: 1;
+  background-color: #f3af9d;
+}
+
+.footer-container {
+  display: flex;
+  flex: 1000;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8663c;
+  flex: 1;
+  padding-top: 36px;
+  padding-left: 34px;
+  padding-bottom: 32px;
+}
+
+.footer__item {
+  width: 290px;
+}
+
+.footer__item-title {
+  font-family: 'Bebas', serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 26px;
+  white-space: pre-wrap;
+}
+
+.footer__item-content {
+  font-family: 'HelveticaNeue', sans-serif;
+  font-size: 12px;
+  width: 100%;
+  color: #fff;
+}
+
+.footer__item-content-list li{
+  margin-bottom: 20px;
+}
+
+.footer__twitter-user,
+.footer__twitter-timeline,
+.footer__twitter-link {
+  color: #f3b29d;
+}
+
+.footer__about {
+  padding-right: 25px;
+}
+
+.footer__twitter-widget {
+ padding-right: 30px;
+}
+
+.footer__twitter-widget a {
+  color: #fff;
+}
+
+.footer__twitter-timeline {
+  display: block;
+  margin-top: 8px;
+}
+
+.footer__contacts {
+  padding-right: 25px;
+}
+.footer__contacts-text {
+  margin-bottom: 16px;
+}
+
+.footer__contacts-info {
+  margin-bottom: 18px;
+}
+
+.footer__contacts-socials {
+  display: flex;
+}
+
+.socials__icon {
+  margin-right: 10px;
+}
+
+.socials__icon:last-child {
+  margin-right: 0;
+}
+
